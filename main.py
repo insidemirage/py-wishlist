@@ -142,7 +142,7 @@ class WishApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             edit_item = QtWidgets.QAction('Редактировать', menu)
             edit_item.triggered.connect(lambda p: self._show_edit_dialog(point))
             remove_item = QtWidgets.QAction("Удалить", menu)
-            remove_item.triggered.connect(lambda p: self.remove_item(point))
+            remove_item.triggered.connect(lambda d: self.remove_item(point))
             menu.addAction(edit_item)
             menu.addAction(remove_item)
         else:
@@ -164,7 +164,8 @@ class WishApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
     # Updates information
     def _update(self):
         rows = self.db_writer.get_info()
-        self._list = rows
+        if rows:
+            self._list = rows
         self.table_widjet.setRowCount(0)
         for row_number, row_data in enumerate(rows):
             self.table_widjet.insertRow(row_number)
