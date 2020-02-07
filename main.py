@@ -110,7 +110,7 @@ class WishApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.setupUi(self)
         self.add_wish.clicked.connect(self._show_add_dialog)
         self.db_writer = DBWriter(config.host, config.user, config.password, config.database)
-        self._list = self._update()
+        self._update()
         self.table_widjet.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.table_widjet.customContextMenuRequested.connect(self.context)
 
