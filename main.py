@@ -159,7 +159,7 @@ class WishApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         if dialog.exec_():
             result = dialog.get_rows()
             self.db_writer.add_item(result)
-            self._list = self._update()
+            self._update()
 
     # Updates information
     def _update(self):
