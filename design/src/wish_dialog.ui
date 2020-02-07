@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>add_wish_dialog</class>
- <widget class="QDialog" name="add_wish_dialog">
+ <class>WishDialog</class>
+ <widget class="QDialog" name="WishDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>317</width>
-    <height>186</height>
+    <height>184</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,7 +48,7 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="accept_wish">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
